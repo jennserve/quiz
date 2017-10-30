@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rick and Morty Quiz</title>
+<style>
+body {
+background-image: url("galaxy.jpg"); 
+background-size: cover; 
+font-family: Courier;
+}
+
+#main {
+width: 80%;
+max-width: 750px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color:white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+color: black;
+border: 2px solid black;
+background-color:white;
+font-family: Courier;
+font-size: 150%; 
+}
+
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+input:checked + label img {
+  border:2px solid #000000;
+}
+
+</style>
+
+
+</head>
+<body>
+<div id="main">
+<div id="header">
+<img src="logo.jpg" width=100%>
+</div>
+
+<form id="form1">
+<h2>Who would you rather be?</h2>
+  <input name="image-pick" value="1" type="radio" id="one" style="display:none">
+    <label for="one">
+      <center><img src="rick.png" style="float:left" width:50% hspace="20"></center
+    </label>
+    <input name="image-pick" value="2" type="radio" id="two" style="display:none">
+    <label for="two">
+      <center><img src="morty.jpg" width:50%></center>
+    </label>
+</form>
+<form id="form2" style="display:none">
+<fieldset>
+<h2> Are you the real Rick?</h2> 
+<p>1.Rick's last name is _______?</p>
+<label><input type="radio" name="lastname" id="marinez" value="0" />Martinez</label>
+<label><input type="radio" name="lastname" id="sanchez" value="20" />Sanchez</label>
+<label><input type="radio"  name="lastname" id="smith" value="0" />Smith</label>
+<label><input type="radio" name="lastname" id="none" value="0" />He doesn't have a last name.</label> 
+
+<p>2.What song did Rick and Morty perform to the giant head?</p>
+<label><input type="radio" name="song" id="colds" value="0" />Get Crazy</label>
+<label><input type="radio" name="song" id="terry" value="0" />Terry Folds</label>
+<label><input type="radio"  name="song" id="schwifty" value="20" />Get Schwifty</label>
+<label><input type="radio" name="song" id="icet" value="0" />You Played Yourself</label> 
+
+<p>3.What is Rick's catchphrase in season 1?</p>
+<label><input type="radio" name="catchphrase" id="dub" value="20" />Wubba Lubba Dub-Dub</label>
+<label><input type="radio" name="catchphrase" id="dib" value="0" />Wubba Lubba Dib-Dib</label>
+<label><input type="radio" name="catchphrase" id="lub" value="0" />Wubba Dubba Lub-Lub</label>
+<label><input type="radio" name="catchphrase" id="bub" value="0" />Wubba Lubba Bub-Bub</label>
+
+<p>4.Where is Rick's favorite place to eat?</p>
+<label><input type="radio" name="food" id="shoney" value="20" />Shoney's</label>
+<label><input type="radio" name="food" id="mcdonalds" value="0" />McDonald's</label>
+<label><input type="radio" name="food" id="panda" value="0" />Panda Express</label>
+<label><input type="radio" name="food" id="citadel" value="0" />Citadel</label> 
+
+<p>5.Rick turned himself into a _______ to get out of family therapy.</p>
+<label><input type="radio" name="object" id="cucumber" value="0" />Cucumber</label>
+<label><input type="radio" name="object" id="zucchini" value="0" />Zucchini</label>
+<label><input type="radio" name="object" id="rat" value="0" />Rat</label>
+<label><input type="radio" name="object" id="pickle" value="20" />Pickle</label>
+
+<button type="submit" value="Submit">Submit</button>
+</fieldset>
+<p>Grade: <span id="grade">__</span></p>
+<p id="grade2"></p>
+</form>
+
+
+<form id="form3" style="display:none">
+<fieldset>
+<h2> Are you the real Morty?</h2> 
+<p>1.If Morty can do anything, what would he want to do?</p>
+<label><input type="radio" name="activity" id="adv" value="0" />Go on an adventure</label>
+<label><input type="radio" name="activity" id="cable" value="0" />Watch interdimensional cable</label>
+<label><input type="radio"  name="activity" id="school" value="0" />Go to school</label>
+<label><input type="radio" name="activity" id="all" value="20" />All the above</label> 
+
+<p>2.Who does Morty really want to spend time with?</p>
+<label><input type="radio" name="time" id="summer" value="0" />Summer</label>
+<label><input type="radio" name="time" id="rick" value="0" />Rick</label>
+<label><input type="radio"  name="time" id="jessica" value="20" />Jessica</label>
+<label><input type="radio" name="time" id="jerry" value="0" />Jerry</label> 
+
+<p>3.What is the name of Morty's school?</p>
+<label><input type="radio" name="school" id="harryHigh" value="20" />Harry Herpson High School</label>
+<label><input type="radio" name="school" id="harryMiddle" value="0" />Harry Herpson Middle School</label>
+<label><input type="radio" name="school" id="herpsonHigh" value="0" />Herpson High School</label>
+<label><input type="radio" name="school" id="herpsonMiddle" value="0" />Herpson Middle School</label>
+
+<p>4.Who won the presidency in Citadel?</p>
+<label><input type="radio" name="pres" id="rick" value="0" />Rick</label>
+<label><input type="radio" name="pres" id="morty" value="0" />Morty</label>
+<label><input type="radio" name="pres" id="bird" value="0" />Birdperson</label>
+<label><input type="radio" name="pres" id="evil" value="20" />Evil Morty</label> 
+
+<p>5.How old is Morty?</p>
+<label><input type="radio" name="age" id="fourteen" value="20" />14</label>
+<label><input type="radio" name="age" id="fifteen" value="0" />15</label>
+<label><input type="radio" name="age" id="thirteen" value="0" />13</label>
+<label><input type="radio" name="age" id="tweleve" value="0" />12</label>
+
+<button type="submit" value="Submit">Submit</button>
+</fieldset>
+<p>Grade: <span id="grade1">__</span></p>
+<p id="grade3"></p>
+</form>
+
+<script> 
+document.getElementById("form1").onchange=function() {
+
+document.getElementById("form2").style.display = "none";
+document.getElementById("form3").style.display = "none";
+
+choice=document.querySelector('input[name = "image-pick"]:checked').value;
+//document.getElementById("selections").value;  
+
+if (choice == 1) {
+document.getElementById("form2").style.display = "block";
+}
+if (choice == 2) {
+document.getElementById("form2").style.display = "none";
+document.getElementById("form3").style.display = "block";
+}
+}
+</script> 
+<script>
+document.getElementById("form2").onsubmit=function() {
+	   lastname= parseInt(document.querySelector('input[name = "lastname"]:checked').value);
+       song= parseInt(document.querySelector('input[name = "song"]:checked').value);
+	   catchphrase = parseInt(document.querySelector('input[name = "catchphrase"]:checked').value);
+	   food = parseInt(document.querySelector('input[name = "food"]:checked').value);
+	   object = parseInt(document.querySelector('input[name = "object"]:checked').value);
+	   
+	   
+	   score = lastname + song + catchphrase + food + object; 
+	   
+	document.getElementById("grade").innerHTML = score;
+
+ grading = [
+	   {score:0,feedback:"Binge watch the show."},
+	   {score:20,feedback:"Jerry?", image:"jerry.png"},
+	   {score:40,feedback:"You may be Morty."},
+	   {score:60,feedback:"You are evil Rick!!", image:"evilrick.gif"},
+	   {score:80,feedback:"You are Rick C-135!", image:"c132r.png"},
+	   {score:100,feedback:"You are Rick C-137!", image:"realrick.jpg"}
+	   ];
+	  
+ for(i=0; i<grading.length; i++) {
+    if(score == grading[i].score) {
+    result2 = grading[i].feedback  + "<br /><img src='" + grading[i].image + "' width='300'  />";
+	  }
+	  }
+	  
+
+document.getElementById("grade2").innerHTML = result2; 
+
+return false; 
+} 
+</script>
+<script>
+document.getElementById("form3").onsubmit=function() {
+	   activity= parseInt(document.querySelector('input[name = "activity"]:checked').value);
+       time= parseInt(document.querySelector('input[name = "time"]:checked').value);
+	   school = parseInt(document.querySelector('input[name = "school"]:checked').value);
+	   pres = parseInt(document.querySelector('input[name = "pres"]:checked').value);
+	   age = parseInt(document.querySelector('input[name = "age"]:checked').value);
+	   
+	   
+	   score = activity + time + school + pres + age; 
+	   
+	document.getElementById("grade1").innerHTML = score;
+
+ grading = [
+	   {score:0,feedback:"Binge watch the show."},
+	   {score:20,feedback:"Who even are you?", image:"morty.gif" },
+	   {score:40,feedback:"You may be Rick."},
+	   {score:60,feedback:"You are Snowball.", image:"snowball.jpg"},
+	   {score:80,feedback:"You are evil Morty.", image:"evilmorty.gif"},
+	   {score:100,feedback:"You are Morty C-137!", image:"realmorty.gif"}
+	   ];
+	  
+ for(i=0; i<grading.length; i++) {
+    if(score == grading[i].score) {
+    result3 = grading[i].feedback  + "<br /><img src='" + grading[i].image + "' width='300'  />";
+	  }
+	  }
+	  
+
+document.getElementById("grade3").innerHTML = result3; 
+
+return false; 
+} 
+</script>
+
+
+</div>
+</body>
+</html>
+
